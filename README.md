@@ -1,5 +1,5 @@
 # SpringBootThymeLeafBootstrap
-Spring Boot &amp; ThymeLeaf with Bootstrap
+Only Layout Spring Boot &amp; ThymeLeaf with Bootstrap 
 
 # Just for Layout!
 
