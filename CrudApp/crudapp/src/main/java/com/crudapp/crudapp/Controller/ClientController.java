@@ -86,8 +86,10 @@ public class ClientController {
     
         System.out.println("here is CreatedAT "+client.getCreatedAt()+" \n\n\n\n");
 
-        if (client==null) 
+        if (client==null){
             return "redirect:/client";  //wrong id.
+        }
+            
         
         
         ClientDto clientDto= new ClientDto(client.getId(), client.getFirstName(), client.getLastName(), client.getEmail(), client.getPhone(), client.getAddress(), client.getStatus(), client.getCreatedAt());
