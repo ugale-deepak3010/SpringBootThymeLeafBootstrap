@@ -10,12 +10,18 @@
    
 
     <div class="container">
-        <h1>Add Client</h1>
+        <h1>Update Client</h1>
 
         <a href="../" class="btn btn-success">Home</a>
         <hr>
         
         <form method="post" action="add" th:object="${clientDto}" >
+          <div class="mb-3" >
+            <label class="form-label" >Id</label>
+            <input readonly th:field="${clientDto.id}" >
+           
+            
+          </div>
           <div class="mb-3" >
             <label class="form-label" >First Name</label>
             <input th:field="${clientDto.firstName}" >
@@ -72,10 +78,21 @@
             th:errorClass="text-danger" th:errors="${clientDto.status}"
             ></p>
           </div>
+
+          <div class="mb-3" >
+            <label class="form-label" >Address</label>
+            <input readonly th:field="${clientDto.createdAt}" >
+            <p 
+            th:if= "${#fields.hasErrors('createdAt)}"
+            th:errorClass="text-danger" th:errors="${clientDto.createdAt}"
+            ></p>
+          </div>
+
+
           <div class="mb-3" >
            
             <a class="btn btn-secondary" href="/client" > Cancel </a>
-            <input class="btn btn-success" type="submit" value="Add" >
+            <input class="btn btn-success" type="submit" value="Update" >
           </div>
 
         </form>
